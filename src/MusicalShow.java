@@ -6,9 +6,15 @@ public class MusicalShow extends Show {
 
     public MusicalShow(String title, int duration, Director director,
                        ArrayList<Actor> listOfActors, String musicAuthor, String librettoText) {
-        super(title, duration, director, listOfActors);
+        super(title, duration, director);
         this.musicAuthor = musicAuthor;
         this.librettoText = librettoText;
+
+        if(listOfActors != null) {
+            for (Actor actor : listOfActors) {
+                addActor(actor);
+            }
+        }
     }
 
     public void printLibretto() {

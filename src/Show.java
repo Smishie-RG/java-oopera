@@ -1,17 +1,18 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Show {
     private String title;
     private int duration;
     private Director director;
-    private ArrayList<Actor> listOfActors;
+    private List<Actor> listOfActors;
 
-    public Show(String title, int duration, Director director, ArrayList<Actor> listOfActors) {
+    public Show(String title, int duration, Director director) {
         this.title = title;
         this.duration = duration;
         this.director = director;
-        this.listOfActors = listOfActors;
+        this.listOfActors = new ArrayList<>();
     }
 
     //Метод печатает список всех актеров
@@ -90,12 +91,8 @@ public class Show {
         this.director = director;
     }
 
-    public ArrayList<Actor> getListOfActors() {
-        return listOfActors;
-    }
-
-    public void setListOfActors(ArrayList<Actor> listOfActors) {
-        this.listOfActors = listOfActors;
+    public List<Actor> getListOfActors() {
+        return Collections.unmodifiableList(listOfActors);
     }
 }
 

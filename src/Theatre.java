@@ -17,7 +17,7 @@ public class Theatre {
 
         //каверы-постановки голивудских фильмов для театра(3шт)
         ArrayList<Actor> dramaActors = new ArrayList<>();
-        Show drama = new Show("Помни", 113, director2, dramaActors);
+        Show drama = new Show("Помни", 113, director2);
 
         ArrayList<Actor> operaActors = new ArrayList<>();
         Opera opera = new Opera("Ла-Ла Ленд", 128, director2, operaActors, musicAuthor,
